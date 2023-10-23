@@ -1,5 +1,6 @@
 import './style.css';
-import { Character, renderCharacters } from './characters';
+import { Rey, renderInfo, renderOverlay } from './rey';
+import { characters } from './personajes';
 
 function main() {
   console.log('Loaded Main :)');
@@ -7,17 +8,13 @@ function main() {
   let domCharacterListElement =
     document.querySelector<HTMLDivElement>('.characters-list');
 
+  let domCharacterOverlay =
+    document.querySelector<HTMLDivElement>('.list-unstyled');
+
   if (domCharacterListElement === null) return;
+  if (domCharacterOverlay === null) return;
 
-  const characters = [
-    new Character('Joffrey Baratheon', 'rey', 50, true),
-    new Character('Jaime Lannister', 'luchador', 35, true),
-    new Character('Daenerys Targaryen', 'luchadora', 29, true),
-    new Character('Tyrion Lannister', 'asesor de Daenerys', 43, true),
-    new Character('Bronn', 'escudero de Jaime', 43, true),
-  ];
-
-  renderCharacters(characters, domCharacterListElement);
+  console.log(characters());
 }
 
 main();

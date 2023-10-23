@@ -13,10 +13,17 @@ export interface CharactersProperties {
 }
 
 export class CharacterMaster implements CharactersProperties {
-  constructor(name: string, family: string, age: number, lifeStatus: boolean) {
+  constructor(
+    name: string,
+    family: string,
+    age: number,
+    lifeStatus: boolean,
+    emoji: string
+  ) {
     this.name = name;
     this.family = family;
     this.age = age;
     this.lifeStatus = lifeStatus;
+    this.emoji = emoji;
   }
 }

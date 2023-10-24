@@ -14,6 +14,7 @@
   "author": "Alejandro Irastorza Leal",
   "license": "ISC",
   "devDependencies": {
+    "sass": "^1.69.4",
     "typescript": "^5.2.2"
   }
 }

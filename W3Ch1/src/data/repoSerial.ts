@@ -4,8 +4,8 @@ import { Squire } from '../Squire';
 import { Character, CharacterStructure } from '../personaje';
 import { King } from '../rey';
 
-export const repo = (): CharacterStructure => {
-  //==> Lo que devuelve mi repo serán los elementos serializados de CharacterStructure. Me devuelve un flujo de datos que se usan en el front
+export const repoSerial = (): CharacterStructure => {
+  //==> Lo que devuelve mi repo serán los elementos serializados de CharacterStructure. Me devuelve un flujo de datos que se usan en el front (Los datos se envías sin métodos ==> Datos puros)
 
   const characters: Character[] = [
     new King('Joffrey', 'Baratheon', 34, ':)', 19),
@@ -17,7 +17,7 @@ export const repo = (): CharacterStructure => {
 
   // Serialización de datos(Hacer que su clase no se mencione en consola)
 
-  return characters; // ==> del back al front
+  return JSON.parse(JSON.stringify(characters)); // ==> del back al front
 
   // Ejecutamos node index.js y verificamos que las clases no se mencionen
 };
